@@ -5,13 +5,13 @@ A few hands-on Scripts to help you practice writing simple Python scripts
 
 Script 1: Grade Calculator
 Write a Python script that takes a student's score as input and outputs their corresponding grade based on the following criteria:
-
+```
 A score of 90 or above gets an 'A'
 A score between 80 and 89 gets a 'B'
 A score between 70 and 79 gets a 'C'
 A score between 60 and 69 gets a 'D'
 A score below 60 gets an 'F'
-
+```
 Script 2: Leap Year Checker
 Write a Python script that prompts the user to enter a year and determines whether it is a leap year or not. A leap year is divisible by 4 but not by 100, except for years that are divisible by 400. The script should print "Leap year" or "Not a leap year" accordingly.
 

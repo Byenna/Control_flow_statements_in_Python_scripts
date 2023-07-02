@@ -1,25 +1,57 @@
 # Practice_writing_simple_Python_scripts
 A few hands-on Scripts to help you practice writing simple Python scripts
 
-**Check the README.md of the specific branch for guidance**
+# A step by step guide on how to...
 
-Script 1: Grade Calculator
-Write a Python script that takes a student's score as input and outputs their corresponding grade based on the following criteria:
+**4 ...write a Python script that takes a number 'n' as input and prints the Fibonacci series up to the 'n'th term. The Fibonacci series starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.**
 
-A score of 90 or above gets an 'A'
-A score between 80 and 89 gets a 'B'
-A score between 70 and 79 gets a 'C'
-A score between 60 and 69 gets a 'D'
-A score below 60 gets an 'F'
 
-Script 2: Leap Year Checker
-Write a Python script that prompts the user to enter a year and determines whether it is a leap year or not. A leap year is divisible by 4 but not by 100, except for years that are divisible by 400. The script should print "Leap year" or "Not a leap year" accordingly.
+Step 1: Take Input from the User
+Start by asking the user to enter the number 'n' and store it in a variable. You can do this using the `input()` function. Here's an example:
 
-Script 3: Guess the Number
-Write a Python script that generates a random number between 1 and 100 and lets the user guess the number. The script should provide feedback to the user after each guess, indicating whether their guess was too high, too low, or correct. The script should continue until the user guesses the correct number.
+`n = int(input("Enter a number: "))`
 
-Script 4: Fibonacci Series
-Write a Python script that takes a number 'n' as input and prints the Fibonacci series up to the 'n'th term. The Fibonacci series starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
+Step 2: Initialize the First Two Terms
+In the Fibonacci sequence, the first two terms are 0 and 1. Create two variables to store these initial terms. Here's an example:
 
-Script 5: Palindrome Checker
-Write a Python script that prompts the user to enter a string and checks whether the string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward.
+```
+term1 = 0
+term2 = 1
+```
+
+Step 3: Generate the Terms in the Fibonacci Series
+To generate the terms in the Fibonacci series, you can use a while loop. Start the loop with a counter set to 0, and continue until the counter reaches the desired 'n' value. In each iteration of the loop, calculate the next term by adding the previous two terms and update the values of the variables accordingly. Here's an example:
+
+```
+counter = 0
+while counter < n:
+    print(term1, end=" ")
+    term_temp = term1 + term2
+    term1 = term2
+    term2 = term_temp
+    counter += 1
+```
+
+Step 4: Output the Fibonacci Series
+Within the loop, print each term in the Fibonacci series using the `print()` function. Add the `end=" "` parameter to print the terms on the same line with spaces in between. Here's an example:
+
+`print(term1, end=" ")`
+
+Putting it all together, here's the complete Python script:
+
+```
+n = int(input("Enter a number: "))
+
+term1 = 0
+term2 = 1
+
+counter = 0
+while counter < n:
+    print(term1, end=" ")
+    term_temp = term1 + term2
+    term1 = term2
+    term2 = term_temp
+    counter += 1
+```
+
+That's it! You have successfully written a Python script that takes a number 'n' as input and prints the Fibonacci series up to the 'n'th term. The script will generate the Fibonacci series starting with 0 and 1, and each subsequent term will be the sum of the two preceding terms.

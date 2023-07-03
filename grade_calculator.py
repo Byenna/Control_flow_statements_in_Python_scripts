@@ -19,3 +19,7 @@ elif score >= 60:
     grade = "D"
 else:
     grade = "F"
+
+# Output the Grade
+
+print(f"Your score is: {grade}")
